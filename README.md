@@ -4,7 +4,7 @@ Using OpenCV natively in C++ in a Flutter app with Dart FFI. Tested with Flutter
 Read the full article here: https://medium.com/flutter-community/integrating-c-library-in-a-flutter-app-using-dart-ffi-38a15e16bc14
 
 If we follow the above link and the original Github repo directly, `flutter` complains about errors during build.
-Problem is that `ffi` changed its interface, so some of the UTF8 string conversion things were not working. The code in this mirror repo has been fixed to conform to the new `ffi` interface. This allows us to use a newer version of `ffi` (`^1.0.0` now), which also seems to have solved the other dependency problems.
+Problem is that `ffi` changed its interface, so some of the UTF8 string conversion things were not working. The code in this mirror repo has been fixed to conform to the new `ffi` interface. See [this](https://stackoverflow.com/questions/68107170/ffi-utf8-fromutf8-error-while-implementing-opencv-c-flutter-app-on-ios) and [this](https://github.com/dart-lang/ffi/issues/89) for the new methods to be called. This allows us to use a newer version of `ffi` (`^1.0.0` now), which also seems to have solved the other dependency problems.
 
 # How to build & run
 1. Download OpenCV for Android and iOS: https://opencv.org/releases/ (tested with opencv-4.5.3)
